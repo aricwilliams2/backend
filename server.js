@@ -3,8 +3,8 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-// Backend always runs on port 5000
-const PORT = 5000;
+// Use PORT from environment variable (for Render/production) or default to 5000 for local development
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 // CORS configuration - allow requests from production domain and localhost for development
